@@ -21,10 +21,10 @@ void Paddle::draw(RenderTarget& target, RenderStates state) const
 void Paddle::update()
 {
 	this->shape.move(this->velocity);
-	if (Keyboard::isKeyPressed(Keyboard::Key::Left) && this->left() > 0) { velocity.x = -paddleVelocity; }
-	else if (Keyboard::isKeyPressed(Keyboard::Key::Right) && this->right() < 800) { velocity.x = paddleVelocity; }
-	else if (Keyboard::isKeyPressed(Keyboard::Key::Up) && this->top() >0) { velocity.y = -paddleVelocity; }
-	else if (Keyboard::isKeyPressed(Keyboard::Key::Down) && this->bottom() < 600) { velocity.y = paddleVelocity; }
+	if (Keyboard::isKeyPressed(Keyboard::Key::Left) && this->left() > 250) { velocity.x = -paddleVelocity; }
+	else if (Keyboard::isKeyPressed(Keyboard::Key::Right) && this->right() < 530) { velocity.x = paddleVelocity; }
+	else if (Keyboard::isKeyPressed(Keyboard::Key::Up) ) { velocity.y = -paddleVelocity; }
+	else if (Keyboard::isKeyPressed(Keyboard::Key::Down) && this->bottom() < 490) { velocity.y = paddleVelocity; }
 	else
 	{
 		velocity.x = 0;

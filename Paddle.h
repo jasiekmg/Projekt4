@@ -18,9 +18,9 @@ public:
 private:
 	void draw(RenderTarget& target, RenderStates state) const override;
 	RectangleShape shape;
-	const float paddleWidth{ 80.0f };
-	const float paddleHeight{ 20.0f };
-	const float paddleVelocity{ 6.0f };
+	const float paddleWidth{ 3.0f };
+	const float paddleHeight{ 400.0f };
+	const float paddleVelocity{ 4.0f };
 	Vector2f velocity{ paddleVelocity, paddleVelocity };
 };
 
