@@ -11,6 +11,7 @@ public:
     Block() = delete;
 	~Block() = default;
 	void update();
+	void grawitacja();
 	void rysuj();
 	float right();
 	float left();

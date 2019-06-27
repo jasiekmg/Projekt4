@@ -46,6 +46,19 @@ else
 
 }
 
+void Block::grawitacja()
+{
+	this->shape.move(this->velocity);
+     if (this->bottom() < 490) { velocity.y = blockVelocity; }
+	else
+	 {
+		 velocity.x = 0;
+		 velocity.y = 0;
+
+	 }
+
+}
+
 
 float Block::left()
 {

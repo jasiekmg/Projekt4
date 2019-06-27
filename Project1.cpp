@@ -24,6 +24,9 @@ bool kolizjatest(Block& block, Paddle& paddle)
 	else if (block.masa <= masa) block.rysuj();
 	else;
 
+	if ((Keyboard::isKeyPressed(Keyboard::Key::A)));
+	else block.grawitacja();
+
 }
 
 bool kolizjatest1(Block1& block1, Paddle& paddle)
@@ -31,7 +34,27 @@ bool kolizjatest1(Block1& block1, Paddle& paddle)
 	if (!isIntersecting(block1, paddle)) return false;
 	else if (block1.masa <= masa) block1.rysuj();
 	else;
+
+	    if ((Keyboard::isKeyPressed(Keyboard::Key::A)));
+		else block1.grawitacja();
+
+	
 }
+
+
+bool gra(Block& block, Paddle& paddle)
+{
+	if (!isIntersecting(block, paddle)) block.grawitacja();
+	else return false;
+
+}
+
+bool gra1(Block1 & block1, Paddle & paddle)
+{
+	if (!isIntersecting(block1, paddle)) block1.grawitacja();
+	else return false;
+}
+
 
 int main()
 
@@ -66,6 +89,8 @@ int main()
 		window.draw(paddle);
 		kolizjatest(block, paddle);
 		kolizjatest1(block1, paddle);
+		gra(block, paddle);
+		gra1(block1, paddle);
 		window.draw(obrazek);
 		window.display();
 

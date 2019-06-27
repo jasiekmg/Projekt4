@@ -46,6 +46,18 @@ void Block1::rysuj()
 
 }
 
+void Block1::grawitacja()
+{
+	this->shape.move(this->velocity);
+		if (this->bottom() < 490) { velocity.y = block1Velocity; }
+		else
+		{
+			velocity.x = 0;
+			velocity.y = 0;
+
+		}
+}
+
 
 float Block1::left()
 {
