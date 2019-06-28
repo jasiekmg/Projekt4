@@ -36,7 +36,7 @@ void Block::rysuj()
 	this->shape.move(this->velocity);
 if (Keyboard::isKeyPressed(Keyboard::Key::Left) && this->left() > 220 && (Keyboard::isKeyPressed(Keyboard::Key::A))) { velocity.x = -blockVelocity; }
 else if (Keyboard::isKeyPressed(Keyboard::Key::Right) && this->right() < 560 && (Keyboard::isKeyPressed(Keyboard::Key::A))) { velocity.x = blockVelocity; }
-else if (Keyboard::isKeyPressed(Keyboard::Key::Up) && this->top() > 0 && (Keyboard::isKeyPressed(Keyboard::Key::A))) { velocity.y = -blockVelocity; }
+else if (Keyboard::isKeyPressed(Keyboard::Key::Up) && this->top() > 100 && (Keyboard::isKeyPressed(Keyboard::Key::A))) { velocity.y = -blockVelocity; }
 else if (Keyboard::isKeyPressed(Keyboard::Key::Down) && this->bottom() < 490 && (Keyboard::isKeyPressed(Keyboard::Key::A))) { velocity.y = blockVelocity; }
 else
 {
